@@ -4,7 +4,7 @@
 set themeNames to {"Aurora Borealis  ·  dark", "Roraima  ·  dark", "Sequoia  ·  dark", "Miami  ·  dark", "Paris  ·  dark", "Tokyo  ·  dark", "Autumn  ·  light", "Everest  ·  light", "Sakura  ·  light", "Istanbul  ·  light", "Rio de Janeiro  ·  light", "Tallinn  ·  light", "↩  Restore original colours"}
 set themeKeys to {"aurora-borealis", "roraima", "sequoia", "miami", "paris", "tokyo", "autumn", "everest", "sakura", "istanbul", "rio-de-janeiro", "tallinn", "--restore"}
 
-set folder to do shell script "dirname " & quoted form of (POSIX path of (path to me))
+set appFolder to do shell script "dirname " & quoted form of (POSIX path of (path to me))
 
 set chosen to choose from list themeNames with title "Codigrate Themes for Rhino" with prompt "Pick a theme to apply. Rhino will close and reopen." OK button name "Apply" cancel button name "Cancel"
 if chosen is false then return
@@ -29,7 +29,7 @@ if rhinoRunning then
 end if
 
 try
-	do shell script "cd " & quoted form of folder & " && /usr/bin/python3 apply-rhino-theme.py " & themeKey
+	do shell script "cd " & quoted form of appFolder & " && /usr/bin/python3 apply-rhino-theme.py " & themeKey
 on error errMsg
 	display dialog "Could not apply the theme:" & return & return & errMsg buttons {"OK"} default button "OK" with icon stop
 	return
