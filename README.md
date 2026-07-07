@@ -21,8 +21,10 @@ Each theme ships a one-click Mac app (also bundled as a `.zip`) and a Windows `.
 ### macOS — full theme (viewport + toolbars, panels, buttons, tabs)
 
 1. Grab **`Codigrate <Name> Rhino Theme.app`** from the theme folder (or unzip the theme's `.zip`).
-2. Double-click it (first time: right-click → Open to get past Gatekeeper). It closes Rhino, applies
-   the full theme, matches your macOS light/dark appearance, and reopens Rhino. Done.
+2. Double-click it. The first time, macOS says it can't verify the developer — click **Done**, then open
+   **System Settings → Privacy & Security**, scroll down and click **Open Anyway** next to the app and
+   confirm (macOS only asks once, because the app isn't notarized). It closes Rhino, applies the full
+   theme, matches your macOS light/dark appearance, and reopens Rhino. Done.
 
 To undo: `python3 apply-rhino-theme.py --restore` (in the repo root), then relaunch Rhino.
 
