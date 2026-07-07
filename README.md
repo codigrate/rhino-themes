@@ -16,33 +16,25 @@ these themes aim to make Rhino feel both elegant and comfortable.
 
 ## Getting Started
 
-Each theme ships as a `.zip` with a Windows `.ini` and a Mac `.plist`. There is also a
-`apply-rhino-theme.py` in the repo root that themes the **whole** Rhino window on Mac.
+Each theme's `.zip` holds a Windows `.ini`, a Mac `.plist`, and a one-click Mac app.
 
 ### macOS — full theme (viewport + toolbars, panels, buttons, tabs)
 
-Rhino colors its window chrome from settings that `OptionsImport` cannot carry, so this pack applies
-them for you.
+1. Download the theme's `.zip` and unzip it.
+2. Double-click **`Codigrate <Name> Rhino Theme.app`** (first time: right-click → Open to get past
+   Gatekeeper). It closes Rhino, applies the full theme, matches your macOS light/dark appearance,
+   and reopens Rhino. Done.
 
-**Easiest — double-click:**
+To undo: `python3 apply-rhino-theme.py --restore` (in the repo root), then relaunch Rhino.
 
-1. Double-click **`Codigrate Themes.app`**. (First time: right-click → Open to get past Gatekeeper.)
-2. Pick a theme from the list and click **Apply** — it closes Rhino, applies the theme and reopens it.
-   Use **Restore original colours** in the same list to undo.
+Prefer it manual (viewport only)? Run the `OptionsImport` command, choose the `.plist` from the zip,
+tick **Appearance** and **Grid**.
 
-**Or from Terminal:**
-
-1. **Quit Rhino.**
-2. `python3 apply-rhino-theme.py aurora-borealis` (run with no name to list the keys).
-3. **Relaunch Rhino.** Undo with `python3 apply-rhino-theme.py --restore`.
-
-### macOS / Windows — viewport only (via OptionsImport)
+### Windows
 
 1. Unzip the theme and run the `OptionsImport` command (or `Tools → Import Options…`).
-2. Pick the `.ini` on Windows or the `.plist` on Mac, tick **Appearance** and **Grid**, click Apply.
-
-On **Windows** this also colors the toolbar/tab chrome (via the `.ini`); on Mac it themes the
-viewport, grid and command prompt (use the script above for the full-window chrome).
+2. Pick the `.ini`, tick **Appearance**, **Grid** and **UiPaintColors**, click Apply — the viewport
+   and toolbar/tab chrome update immediately.
 
 ## Notes
 
