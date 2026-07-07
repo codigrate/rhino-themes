@@ -16,34 +16,30 @@ these themes aim to make Rhino feel both elegant and comfortable.
 
 ## Getting Started
 
-Each theme's `.zip` holds a Windows `.ini`, a Mac `.plist`, and a one-click Mac app.
+Each theme ships a one-click Mac app (also bundled as a `.zip`) and a Windows `.ini`.
 
 ### macOS — full theme (viewport + toolbars, panels, buttons, tabs)
 
-1. Download the theme's `.zip` and unzip it.
-2. Double-click **`Codigrate <Name> Rhino Theme.app`** (first time: right-click → Open to get past
-   Gatekeeper). It closes Rhino, applies the full theme, matches your macOS light/dark appearance,
-   and reopens Rhino. Done.
+1. Grab **`Codigrate <Name> Rhino Theme.app`** from the theme folder (or unzip the theme's `.zip`).
+2. Double-click it (first time: right-click → Open to get past Gatekeeper). It closes Rhino, applies
+   the full theme, matches your macOS light/dark appearance, and reopens Rhino. Done.
 
 To undo: `python3 apply-rhino-theme.py --restore` (in the repo root), then relaunch Rhino.
 
-Prefer it manual (viewport only)? Run the `OptionsImport` command, choose the `.plist` from the zip,
-tick **Appearance** and **Grid**.
-
 ### Windows
 
-1. Unzip the theme and run the `OptionsImport` command (or `Tools → Import Options…`).
-2. Pick the `.ini`, tick **Appearance**, **Grid** and **UiPaintColors**, click Apply — the viewport
-   and toolbar/tab chrome update immediately.
+1. Run the `OptionsImport` command (or `Tools → Import Options…`) on the theme's `.ini`.
+2. Tick **Appearance**, **Grid** and **UiPaintColors**, click Apply — the viewport and toolbar/tab
+   chrome update immediately.
 
 ## Notes
 
 - **Match your appearance to the theme.** Rhino draws a few controls (checkbox labels, disabled
   fields) with the macOS system appearance, so a **light** theme wants macOS **Light** mode and a
-  **dark** theme wants macOS **Dark** mode. The script handles the light case for you (it pins Rhino
-  to a light appearance); for dark themes, switch macOS to Dark mode for the crispest result.
+  **dark** theme wants macOS **Dark** mode. The Mac app switches your appearance to match the theme
+  automatically; on Windows, set your system theme to match for the crispest result.
 - Designed for **Rhino 8** on Mac and **Rhino 7/8** on Windows.
-- The script keeps a one-time pristine backup and only changes colors — your aliases, shortcuts,
+- The Mac app keeps a one-time pristine backup and only changes colors — your aliases, shortcuts,
   display modes and file locations are left untouched.
 - Light themes keep the construction-grid lines deliberately faint so they never fight the model.
 - Colors match the Codigrate ports of the same theme across the other platforms.
