@@ -42,3 +42,7 @@
 /cities/vienna-theme/Codigrate Vienna Rhino Theme.app/
 /cities/vienna-theme/Codigrate Vienna.zip
 # --- end premium themes ---
+
+# sync-client duplicates ("Codigrate X 2.zip") of the paid downloads, never committed
+/*/*-theme/* [0-9].zip
+/*/*-theme/* [0-9].app/
